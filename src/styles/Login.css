@@ -1,0 +1,98 @@
+@keyframes gradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: scale(1.1);
+  width: 300px;
+}
+
+.login-form h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.login-form label {
+  color: #c5e7e2;
+  font-family: Roboto , sans-serif;
+  font-weight: 600;
+}
+
+.login-form input {
+  background-color: #202324;
+  border: 1px solid #31a53141;
+  border-radius: 4px;
+  color: #c5e7e2;
+  font-family: Roboto , sans-serif;
+  padding: 10px;
+  position: relative;
+}
+
+.login-form input::placeholder {
+  color: rgb(133, 133, 133);
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.login-button {
+  background-color: #31a531;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #c5e7e2;
+  cursor: pointer;
+  font-family: Roboto , sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+}
+
+.login-button:hover {
+  background-color: transparent;
+}
+
+.login-button:hover:before {
+  animation: gradient 1.4s ease-out infinite;
+  background: linear-gradient(120deg, #3c5a63, #31a531, #3c5a63 50%, #31a531);
+  background-size: 400% 400%;
+  border-radius: 4px;
+  content: '';
+  height: calc(100% + 4px);
+  left: -2px;
+  position: absolute;
+  top: -2px;
+  width: calc(100% + 4px);
+  z-index: -1;
+}
+
+.login-button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}
