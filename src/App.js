@@ -24,16 +24,16 @@ class App extends React.Component {
     const { favoriteAlbums } = this.state;
     return (
       <Switch>
-        <Route exact path="/" component={ Login } />
+        <Route exact path="/trybetunes/" component={ Login } />
         <Route
-          path="/search"
+          path="/trybetunes/search"
           render={ (props) => (
             <Search { ...props } onUpdateFavorites={ this.updateFavorites } />
           ) }
         />
-        <Route path="/album/:id" component={ Album } />
+        <Route path="/trybetunes/album/:id" component={ Album } />
         <Route
-          path="/favorites"
+          path="/trybetunes/favorites"
           render={ (props) => (
             <Favorites
               { ...props }
@@ -41,10 +41,10 @@ class App extends React.Component {
               onUpdateFavorites={ this.updateFavorites }
             />) }
         />
-        <Route exact path="/profile" component={ Profile } />
-        <Route path="/profile/edit" component={ ProfileEdit } />
-        <Route path="/loading" component={ Loading } />
-        <Route path="*" component={ NotFound } />
+        <Route exact path="/trybetunes/profile" component={ Profile } />
+        <Route path="/trybetunes/profile/edit" component={ ProfileEdit } />
+        <Route path="/trybetunes/loading" component={ Loading } />
+        <Route path="/trybetunes/*" component={ NotFound } />
       </Switch>
     );
   }
