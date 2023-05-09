@@ -46,7 +46,7 @@ class Profile extends React.Component {
                         src={ user.image }
                         alt={ `${user.name}` }
                       />
-                      <Link className="edit-profile-button" to="/profile/edit">
+                      <Link className="edit-profile-button" to="/trybetunes/profile/edit">
                         Editar perfil
                       </Link>
                     </div>

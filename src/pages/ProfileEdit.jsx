@@ -81,7 +81,7 @@ class ProfileEdit extends React.Component {
   handleSaveClick = () => {
     const { user } = this.state;
     updateUser(user);
-    this.setState({ redirectTo: '/profile' });
+    this.setState({ redirectTo: '/trybetunes/profile' });
   };
 
   render() {

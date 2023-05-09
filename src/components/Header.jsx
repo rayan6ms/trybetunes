@@ -35,9 +35,24 @@ class Header extends React.Component {
             </h1>
             <h1 className="username">{`${storedUser}`}</h1>
           </div>
-          <Link data-testid="link-to-search" to="/search">Search</Link>
-          <Link data-testid="link-to-favorites" to="/favorites">Favorites</Link>
-          <Link data-testid="link-to-profile" to="/profile">Profile</Link>
+          <Link
+            data-testid="link-to-search"
+            to="/trybetunes/search"
+          >
+            Search
+          </Link>
+          <Link
+            data-testid="link-to-favorites"
+            to="/trybetunes/favorites"
+          >
+            Favorites
+          </Link>
+          <Link
+            data-testid="link-to-profile"
+            to="/trybetunes/profile"
+          >
+            Profile
+          </Link>
         </header>
       </header>
     );

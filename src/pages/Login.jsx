@@ -60,7 +60,7 @@ class Login extends React.Component {
       const { loginName, email, image, description } = this.state;
       await createUser({ name: loginName, email, image, description });
       const { history } = this.props;
-      history.push('/search');
+      history.push('/trybetunes/search');
     });
   };
 
