@@ -16,7 +16,6 @@ class Search extends React.Component {
     albumsPerPage: 30,
     neededAlbums: 0,
     isLoading: false,
-    isLoaded: false,
     isRecommendation: { fromList: false, fromFavorites: false },
     searchResult: [],
     genresList: [
@@ -69,7 +68,6 @@ class Search extends React.Component {
     this.setState({
       searchResult,
       isLoading: false,
-      isLoaded: true,
       artist: genre,
       neededAlbums,
     });
@@ -111,7 +109,6 @@ class Search extends React.Component {
     this.setState({
       searchResult,
       isLoading: false,
-      isLoaded: true,
       isRecommendation: false,
       artist: searchInput,
       searchInput: '',
@@ -148,7 +145,6 @@ class Search extends React.Component {
       searchInput,
       isLoading,
       artist,
-      isLoaded,
       isRecommendation: { fromList, fromFavorites },
       searchResult,
       genresList,
@@ -168,19 +164,18 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search" className="search-page">
         <Header isLoading={ false } />
+        <SearchBar
+          isLoading={ isLoading }
+          artist={ artist }
+          fromList={ fromList }
+          fromFavorites={ fromFavorites }
+          searchInput={ searchInput }
+          handleInputChange={ this.handleInputChange }
+          handleInputClick={ this.handleInputClick }
+          handleEnterKey={ this.handleFormSubmit }
+          handleSearchButton={ this.handleSearchButton }
+        />
         { isLoading ? <Loading /> : (
-          <SearchBar
-            isLoading={ isLoading }
-            artist={ artist }
-            fromList={ fromList }
-            fromFavorites={ fromFavorites }
-            searchInput={ searchInput }
-            handleInputChange={ this.handleInputChange }
-            handleInputClick={ this.handleInputClick }
-            handleEnterKey={ this.handleFormSubmit }
-            handleSearchButton={ this.handleSearchButton }
-          />)}
-        {isLoaded && (
           <SearchContent
             searchResult={ currentAlbums }
             favoriteAlbums={ favoriteAlbums }

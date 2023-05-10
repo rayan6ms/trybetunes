@@ -17,15 +17,21 @@ class Header extends React.Component {
   async getUser() {
     const { name } = await getUser();
     this.setState({ name });
+    localStorage.setItem('storedUserName', JSON.stringify(name));
   }
+
+  shortenName = (name) => {
+    const MAX_LENGTH = 11;
+    return name.length > MAX_LENGTH ? `${name.slice(0, MAX_LENGTH)}...` : name;
+  };
 
   render() {
     const { isLoading } = this.props;
     const { name } = this.state;
-    const MAX_LENGTH = 11;
-    const formattedName = name && name.length > MAX_LENGTH
-      ? `${name.slice(0, MAX_LENGTH)}...` : name;
-    const storedUser = formattedName || 'Usuário';
+
+    const storedName = JSON.parse(localStorage.getItem('storedUserName'));
+    const formattedName = this.shortenName(storedName || name);
+
     return isLoading ? <Loading /> : (
       <header data-testid="header-component">
         <header className="header">
@@ -33,7 +39,7 @@ class Header extends React.Component {
             <h1 data-testid="header-user-name">
               {'Bem-vindo, '}
             </h1>
-            <h1 className="username">{`${storedUser}`}</h1>
+            <h1 className="username">{`${formattedName}`}</h1>
           </div>
           <Link
             data-testid="link-to-search"

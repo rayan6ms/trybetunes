@@ -28,7 +28,7 @@ class SearchResult extends React.Component {
       <Link
         className="search-results"
         data-testid={ `link-to-album-${collectionId}` }
-        to={ `/album/${collectionId}` }
+        to={ `/trybetunes/album/${collectionId}` }
       >
         <img src={ artworkUrl100 } alt={ artistName } />
         <div className="card-texts">
