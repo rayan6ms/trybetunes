@@ -21,4 +21,4 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver uma 
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+Este projeto não está licenciado já que vem de um conjunto de exercícios da escola de programação Trybe.
