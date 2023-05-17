@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/trybetunes/static/css/main.7e463cfe.css",
-    "main.js": "/trybetunes/static/js/main.486da8f1.js",
+    "main.js": "/trybetunes/static/js/main.21cfabf3.js",
     "static/media/profile-video.mp4": "/trybetunes/static/media/profile-video.ef7c53438383273d415a.mp4",
     "index.html": "/trybetunes/index.html",
     "main.7e463cfe.css.map": "/trybetunes/static/css/main.7e463cfe.css.map",
-    "main.486da8f1.js.map": "/trybetunes/static/js/main.486da8f1.js.map"
+    "main.21cfabf3.js.map": "/trybetunes/static/js/main.21cfabf3.js.map"
   },
   "entrypoints": [
     "static/css/main.7e463cfe.css",
-    "static/js/main.486da8f1.js"
+    "static/js/main.21cfabf3.js"
   ]
 }
